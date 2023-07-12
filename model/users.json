@@ -1,0 +1,20 @@
+[
+  {
+    "username": "Aishat",
+    "password": "$2b$10$VNFOcOFbmugKzeFbvloCvudTYOGFOqZ1RjyMqxMjPQsOm5Y.A8ZA2",
+    "roles": { "User": 1100 },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFpc2hhdCIsImlhdCI6MTY4ODQ3NDIzNiwiZXhwIjoxNjg4NTYwNjM2fQ.pCOYLvImgMEPM6lr7dzk3u_x1Wai8tpjcnAJrawAQnQ"
+  },
+  {
+    "username": "Azeezat",
+    "password": "$2b$10$VNFOcOFbmugKzeFbvloCvudTYOGFOqZ1RjyMqxMjPQsOm5Y.A8ZA2",
+    "roles": { "Editor": 3500, "User": 1100 },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkF6ZWV6YXQiLCJpYXQiOjE2ODg0NzQ0MjAsImV4cCI6MTY4ODU2MDgyMH0.mdjRGRIgIgl64qhyfE-kxqPFCY4YqfBHneOr76QJEVw"
+  },
+  {
+    "username": "Azeez",
+    "password": "$2b$10$VNFOcOFbmugKzeFbvloCvudTYOGFOqZ1RjyMqxMjPQsOm5Y.A8ZA2",
+    "roles": { "Admin": 4000, "Editor": 3500, "User": 1100 },
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkF6ZWV6IiwiaWF0IjoxNjg4NDc0ODMwLCJleHAiOjE2ODg1NjEyMzB9.ecxR_N4wqL71gFEhPh0RqOtpQKd0jGEUnUeJx6G4Nyo"
+  }
+]
