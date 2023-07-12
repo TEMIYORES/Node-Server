@@ -1,14 +1,14 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
-const reqHandler = require("./middleware/reqHandler");
-const errHandler = require("./middleware/errorHandler");
+const reqHandler = require("../middleware/reqHandler");
+const errHandler = require("../middleware/errorHandler");
 const cors = require("cors");
-const jwtVerify = require("./middleware/verifyJwt");
+const jwtVerify = require("../middleware/verifyJwt");
 const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
-const corsOptions = require("./config/corsOptions");
-const connectDB = require("./config/mongoDBConn");
+const corsOptions = require("../config/corsOptions");
+const connectDB = require("../config/mongoDBConn");
 const app = express();
 
 // Connect to MongoDB
@@ -37,15 +37,15 @@ app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "public")));
 
 // Serve router Handlers
-app.use("/", require("./routes/root"));
-app.use("/register", require("./routes/register"));
-app.use("/auth", require("./routes/auth"));
-app.use("/refresh", require("./routes/refresh"));
-app.use("/logout", require("./routes/logout"));
+app.use("/", require("../routes/root"));
+app.use("/register", require("../routes/register"));
+app.use("/auth", require("../routes/auth"));
+app.use("/refresh", require("../routes/refresh"));
+app.use("/logout", require("../routes/logout"));
 
 app.use(jwtVerify);
-app.use("/employees", require("./routes/api/employee"));
-app.use("/users", require("./routes/api/user"));
+app.use("/employees", require("../routes/api/employee"));
+app.use("/users", require("../routes/api/user"));
 
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "404.html"));
@@ -75,3 +75,5 @@ process.on("uncaughtException", (err) => {
     "An unexpected errror was caught : " + err.name + " : " + err.message
   );
 });
+
+module.exports.handler = serverless(app)
